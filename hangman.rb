@@ -4,15 +4,12 @@
 # Example: hangman("alphabet",["a","h"]) should return "a__ha___"
 
 def hangman(word = "alphabet", search = ["b", "a", "t", "h"])
-    result = []
+    
     string = ""
-    counter = 0
-
     wordArray = word.chars
 
-    
-
     wordArray.each do |char| 
+        
         name = "_"    
         
         search.each do |simbol|
@@ -21,18 +18,16 @@ def hangman(word = "alphabet", search = ["b", "a", "t", "h"])
             end
         end
         
-        result.push(name)
-        counter += 1
+        string += name
     end
 
-
-    result.each do |char|
-        string += char
-    end
-
+    puts "-" * 50
+    puts "Latters: #{search}"
     puts "Word:   #{word}"
-    puts "String: #{string}"
+    puts "Result: #{string}"
 end
 
-hangman("bob", ["b", "a"])
+
 hangman()
+hangman("bob", ["b", "a"])
+hangman("translater", ["s", "a"])
