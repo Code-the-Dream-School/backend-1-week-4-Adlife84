@@ -32,10 +32,14 @@ class Sum2
     end
 end
 
+
+
 firstSum = Sum1.new(5,6)
 secondSum = Sum2.new(5,6)
 
+
 puts firstSum.total
 puts secondSum.new_total
+
 
 
